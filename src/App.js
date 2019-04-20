@@ -1,28 +1,16 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './App.scss';
+import Header from './shared/components/Header/Header';
+import AppHeader from './layout/components/AppHeader/AppHeader';
+import Todo from './shared/components/Todo/Todo';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
-}
+const App = () => (
+  <div className="app">
+    <Header isAppHeader>
+      <AppHeader title="Todo App" />
+    </Header>
+    <Todo />
+  </div>
+);
 
 export default App;

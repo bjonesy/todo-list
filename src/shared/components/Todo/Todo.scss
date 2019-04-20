@@ -1,0 +1,17 @@
+.form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "input submit";
+  margin: 40px auto;
+  width: 960px;
+  &__input {
+    grid-area: input;
+  }
+  &__submit {
+    background: blue;
+    border: 0;
+    color: white;
+    grid-area: submit;
+    outline: 0;
+  }
+}
